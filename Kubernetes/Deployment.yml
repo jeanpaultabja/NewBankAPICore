@@ -1,0 +1,21 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: newbankapicore
+ labels:
+    app: newbankapicore
+spec:
+ replicas: 1
+ selector:
+    matchLabels:
+      app: newbankapicore
+ template:
+    metadata:
+       labels:
+        app: newbankapicore
+    spec:
+      containers:
+      - name: newbankapicorecontainer
+        image: docker.io/jptabja/newbankapicore:latest
+        ports:
+        - containerPort: 8443

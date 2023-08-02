@@ -11,7 +11,7 @@ RUN adduser \
 USER app
 
 WORKDIR /app
-COPY ./publish .
+COPY ./Publish .
 
 ENV DOTNET_RUNNING_IN_CONTAINER=true \
   ASPNETCORE_URLS=https://+:8443
